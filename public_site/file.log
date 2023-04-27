@@ -1,0 +1,10 @@
+<?php
+$e = true;
+//if ($e) $_SESSION["username"]=  "admin";
+if ($e) $_SESSION["username"]=  "mr_x";
+$_SESSION['config_file'] ="???";
+echo "PHP WORKS!<br>\n";
+?>
+log1
+log2
+log3

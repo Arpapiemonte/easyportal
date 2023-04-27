@@ -1,0 +1,6 @@
+Nav text;Link home;Group Name NAV COLUMN(NAV1|NAV2|NAV3|NAV4)#HEADER;Menu text;Link;tag_search1#tag_search2#tag_search3
+Example;/public_site/example/home.php;NAV1#Table;Table Example from JSON;/public_site/example/table_example.php;tabulator#table
+Example;/public_site/example/home.php;NAV2#Graph;Graph Example from JSON;/public_site/example/graph_example.php;graph#chart
+Example;/public_site/example/home.php;NAV3#Slider;Slider Example JSSOR;/public_site/example/slider_example.php;slider
+Example;/public_site/example/home.php;NAV4#Map;LeaFlet Example;/public_site/example/leaflet_example.php;leaflet#map
+Example;/public_site/example/home.php;NAV4#Map2;LeaFlet Example2;/public_site/example/leaflet_example2.php?op=2;leaflet#map

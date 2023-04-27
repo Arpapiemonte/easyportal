@@ -1,0 +1,4 @@
+Nav text;Link home;Group Name NAV COLUMN(NAV1|NAV2|NAV3|NAV4)#HEADER;Menu text;Link;tag_search1#tag_search2#tag_search3
+Example2;/public_site/example2/;NAV1#Example2_1;Example2_1;/public_site/example2/example2_1.php;example2_1
+Example2;/public_site/example2/;NAV2#Example2_2;Example2_2;/public_site/example2/example2_2.php;example2_2
+Example2;/public_site/example2/;NAV3#Example2_3;Example2_3;/public_site/example2/example2_3.php;example2_3

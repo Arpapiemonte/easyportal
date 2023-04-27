@@ -1,0 +1,17 @@
+/arpa
+/vendor
+
+
+.idea
+.DS_store
+
+.env
+
+/test.json
+/test
+
+/production.json
+/production
+/Dockerfile
+/docker/Dockerfile
+

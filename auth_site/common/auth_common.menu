@@ -1,0 +1,4 @@
+Nav text;Link home;Group Name NAV COLUMN(NAV1|NAV2|NAV3|NAV4)#HEADER;Menu text;Link;tag_search1#tag_search2#tag_search3
+Auth common;/auth_site/common/;NAV1#Auth common;auth common;/auth_site/common/home.php;auth common
+Auth common 2;/auth_site/common/auth1/;NAV1#Auth common;auth1 common;/auth_site/common/auth1/;auth1 common
+Auth common 2;/auth_site/common/auth2/;NAV1#Auth common;auth2 common;/auth_site/common/auth2/;auth2 common

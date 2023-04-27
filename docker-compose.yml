@@ -1,0 +1,53 @@
+---
+
+version: '3.7'
+
+networks:
+  easyportal-network:
+    driver: bridge
+
+services:
+  webserver:
+    image: nginx:alpine
+    container_name: easyportal_reverse_proxy
+    volumes:
+      - ./docker/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./:/var/www/html
+    ports:
+      - "80:80"
+    networks:
+      - easyportal-network
+
+  app:
+    container_name: easyportal_app
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      target: dev
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "8008:80"
+      - "8080:443"
+    networks:
+      - easyportal-network
+
+  ldap:
+    image: osixia/openldap:1.5.0
+    container_name: easyportal_ldap
+    hostname: ldap
+    restart: unless-stopped
+    command: [--copy-service, --loglevel, debug]
+    ports:
+      - "636:636"
+    environment:
+      - LDAP_ORGANISATION=Demo Organisation
+      - LDAP_DOMAIN=ldap
+      - LDAP_ADMIN_PASSWORD=mypass
+      - LDAP_TLS_VERIFY_CLIENT=try
+    volumes:
+      - ./docker/ldap/users.ldif:/container/service/slapd/assets/config/bootstrap/ldif/custom/users.ldif
+      - ./docker/ldap/certs:/container/service/slapd/assets/certs
+      - ./docker/ldap/certs/ca.crt:/usr/local/share/ca-certificates/ca.crt
+    networks:
+      - easyportal-network

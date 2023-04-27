@@ -1,0 +1,5 @@
+Group;Tab Name; Link Tab;Menu text
+example1;Table Example from JSON;/public_site/example/table_example.php;Example
+example1;Graph Example from JSON;/public_site/example/graph_example.php;Example
+example1;Slider Example JSSOR;/public_site/example/slider_example.php;Example
+example1;LeaFlet Example;/public_site/example/leaflet_example.php;Example

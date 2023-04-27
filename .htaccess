@@ -1,0 +1,3 @@
+RewriteEngine On
+#RewriteBase /var/www/html/easyportal/
+RewriteRule ^(.*)$ core/index_wrapper.php [L,QSA]

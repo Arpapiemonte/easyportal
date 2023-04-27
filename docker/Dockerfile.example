@@ -1,0 +1,23 @@
+FROM composer:2.3.7 as composer
+
+WORKDIR /app
+# COPY ./composer.json composer.json
+# COPY ./composer.lock composer.lock
+# RUN composer install --prefer-dist --no-scripts -q -o
+
+FROM easyportal/base as dev
+
+WORKDIR /var/www/html
+# add your own development dependencies here
+# COPY --from=composer /app/vendor /vendor
+RUN mv "$PHP_INI_DIR/php.ini-development" "$PHP_INI_DIR/php.ini"
+CMD ["sh", "/usr/local/bin/entrypoint.sh"]
+
+FROM easyportal/base as prod
+
+WORKDIR /var/www/html
+# add your own production dependencies here
+COPY . .
+# COPY --from=composer /app/vendor /vendor
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+CMD ["sh", "/usr/local/bin/entrypoint.sh"]

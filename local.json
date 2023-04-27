@@ -1,0 +1,41 @@
+{
+  "excluded_pages":[
+    "/public_site/example/excluded.json",
+    "/auth_site/common/excluded.php",
+    "/core/index_wrapper.php"
+    ],
+  "no_replace_pages":[
+    "/public_site/news2.php"
+    ],
+  "file_menus":[
+    "/public_site/example/example.menu",
+    "/public_site/example2/example2.menu"
+    ],
+  "auth_menus":[
+    "/auth_site/common/auth_common.menu",
+    "/auth_site/test/auth_test.menu",
+    "/auth_site/test2/auth_test2.menu",
+    "/auth_site/admins/auth_admins.menu"
+    ],
+  "file_tabs":[
+    "/public_site/example/example.tab",
+    "/public_site/example2/example2.tab"
+    ],
+  "extends_dirs":[
+    "mydir"
+  ],
+  "extends_files":[
+    "/logo_demo_2.png"
+  ],
+  "footer_links": {
+    "Link 1": "#",
+    "Link 2": "#",
+    "Link 3": "#"
+  },
+  "social_links": {
+    "facebook": "https://facebook.com",
+    "youtube": "https://youtube.com",
+    "twitter": "https://twitter.com",
+    "instagram": "https://instagram.com"
+  }
+}

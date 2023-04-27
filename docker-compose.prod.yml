@@ -1,0 +1,19 @@
+---
+
+version: '3.7'
+
+services:
+  app:
+    container_name: easyportal_app
+    build:
+      context: .
+      dockerfile: ./docker/Dockerfile
+      target: prod
+    volumes:
+      - ./auth:/var/www/html/auth
+      - ./public:/var/www/html/public
+      - ./production.json:/var/www/html/production.json
+      - ./production:/var/www/html/production
+    ports:
+      - "8080:80"
+      - "8443:443"
